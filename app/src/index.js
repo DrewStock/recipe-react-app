@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 
+import RecipeList from './components/recipe_list';
+
 class App extends Component {
 
     constructor(props) {
@@ -16,7 +18,6 @@ class App extends Component {
     componentDidMount() {
         axios.get(`http://localhost:5000/api/recipes/`)
         .then(res => {
-            console.log(res.data);
             const recipes = res.data;
             this.setState({ recipes });
         });
@@ -25,14 +26,17 @@ class App extends Component {
     render() {
         return (
             <div>
-                {this.state.recipes.map(recipe =>
-                    <div>
-                        <h1 key={recipe._id}>{recipe.name}</h1>
-                        <p>{recipe.description}</p>
-                        <img src={recipe.imageUrl}/>
-                    </div>
-                )}
+            <RecipeList recipes={this.state.recipes} />
             </div>
+            // <div>
+            //     {this.state.recipes.map(recipe =>
+            //         <ul>
+            //             <li key={recipe.recipeId}>{recipe.name}</li>
+            //             <p>{recipe.description}</p>
+            //             <img src={recipe.imageUrl}/>
+            //         </ul>
+            //     )}
+            // </div>
         )
     }
 }

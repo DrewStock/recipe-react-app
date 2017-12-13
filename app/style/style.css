@@ -23,8 +23,17 @@ body {
     background-color: #fff;
 }
 
+.list-group {
+    /* width: 100%; */
+}
+
 .list-group-item {
+    margin: 1rem;   
     cursor: pointer;
+}
+
+.list-group-item img {
+    max-width: 300px;
 }
 
 .list-group-item:hover {
