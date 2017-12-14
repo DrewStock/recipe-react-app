@@ -11,16 +11,12 @@ body {
     width: 75%;
 }
 
-.video-item img {
-    max-width: 64px;
-}
-
-.video-detail .details {
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #fff;
+.media {
+    /* margin-bottom: 1rem; */
+    /* padding: 10px; */
+    /* border: 1px solid #ddd;
+    border-radius: 4px; */
+    /* background-color: #fff; */
 }
 
 .list-group {
@@ -30,12 +26,33 @@ body {
 .list-group-item {
     margin: 1rem;   
     cursor: pointer;
+    border-radius: .25rem;
 }
 
-.list-group-item img {
-    max-width: 300px;
+.card {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
-.list-group-item:hover {
+.recipe-item {
+    padding: 1rem;
+}
+
+.recipe-item img {
+    float: left;
+    padding: .5rem;
+    max-width: 96px;
+    max-height: 96px;
+    margin-bottom: .5rem;
+}
+
+.detail-image img {
+    float: left;
+    max-width: 75%;
+    max-height: 432px;
+    padding: 1rem;
+}
+
+.media:hover {
     background-color: #eee;
 }

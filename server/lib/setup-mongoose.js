@@ -1,10 +1,7 @@
 const mongoose = require( 'mongoose' );
 
 // we need a URI that points to our database
-const dbURI = process.env.MONGODB_URI || 'mongodb://dstock2:chapman_four_lurk@ds053778.mlab.com:53778/recipe-app';
-
-// MONGODB_URI info for test database (see below)
-//'mongodb://test-chore-game-admin:cutter_jar_flatware@ds145828.mlab.com:45828/test-chore-game';
+const dbURI = process.env.MONGODB_URI;
 
 mongoose.Promise = Promise;
 mongoose.connect( dbURI );
