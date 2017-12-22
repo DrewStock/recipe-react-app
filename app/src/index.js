@@ -18,7 +18,7 @@ class App extends Component {
     }
 
     componentDidMount() {
-        axios.get(`http://localhost:5000/api/recipes/`)
+        axios.get(`https://drewstockpdx-recipe-api.herokuapp.com/api/recipes`)
         .then(res => {
             const recipes = res.data;
             this.setState({ 
